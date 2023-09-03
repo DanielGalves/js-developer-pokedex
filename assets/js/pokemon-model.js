@@ -11,5 +11,7 @@ class Pokemon {
     stat;
     base_stats =[];
     base_stat;
+    species = [];
+    specie;
 
 }

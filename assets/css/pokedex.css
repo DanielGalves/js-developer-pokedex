@@ -134,7 +134,20 @@
     
 }
 
+/*.progress-bar{
+    --progress: 50;
+    height: 80%;
+    padding: .5px;
+    display: flex;
+    
+}
 
+.progress-bar::before{
+    content: "";
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+  }
+*/
 .pagination {
     display: flex;
     flex-direction: row;
@@ -186,8 +199,9 @@
         width: 23.5%;
         max-width: 23.5%;
     }
+}  
 
-}
+
 .normal {
     background-color: #a6a877;
 }

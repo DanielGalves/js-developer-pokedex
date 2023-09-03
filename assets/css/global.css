@@ -4,15 +4,16 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #d3d4d6;
 }
 .head {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background-color: #f6f8fc;
+    background-color: #fff;
     width: 100%;
     height: 50px;
+    border-radius: .5rem;
     z-index: 2;
 }
 .content {

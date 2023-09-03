@@ -1,8 +1,8 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
-const maxRecords = 151
-const limit = 10
+const maxRecords = 151;
+const limit = 12;
 let offset = 0;
 
 
@@ -34,7 +34,17 @@ function convertPokemonToLi(pokemon) {
                         ${pokemon.stats.map((stat) => `<li class="stats">${stat} </li>`).join('') }  
                     </ol>    
                     <ol class="numberStats">       
-                        ${pokemon.base_stats.map((base_stat) => `<li class="base_stats">${base_stat} </li>`).join('') }     
+                        ${pokemon.base_stats.map((base_stat) => `
+                        <li class="base_stats">
+                            <div style="--progress: ${base_stat}; 
+                                height: 80%; padding: .5px;
+                                display: flex;
+                                max-width: 100%;
+                                width: calc(var(--progress) * 1%);
+                                background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%); 
+                                border-radius: 1rem" >${base_stat} 
+                            </div>
+                        </li>`).join('') }     
                     </ol>
                 </div>    
                 </ol>
